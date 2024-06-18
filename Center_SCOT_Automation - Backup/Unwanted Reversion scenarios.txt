@@ -1,0 +1,58 @@
+  ~@SalesMessage_Reversion
+  Scenario: TC0005_Centre_Reversion of Sales message
+    And I logged in Trading BackOffice
+    And I choose HeadOffice
+    And I choose Message option from maintanence menu
+    When I choose Live Sales message
+    And I remove UPC from the message
+    And I remove store from the message
+    And I save the change
+    Then changes are saved
+
+  ~@PaymentMessage_Reversion
+  Scenario: TC0005_Centre_Reversion of Payment message
+    And I logged in Trading BackOffice
+    And I choose HeadOffice
+    And I choose Message option from maintanence menu
+    When I choose Live Payment message
+    And I remove store from the message
+    And I save the change
+    Then changes are saved
+
+  ~@RefundMessage_Reversion
+  Scenario: TC0005_Centre_Reversion of refund message
+    And I logged in Trading BackOffice
+    And I choose HeadOffice
+    And I choose Message option from maintanence menu
+    When I choose Live Refund message
+    And I remove UPC from the message
+    And I remove store from the message
+    And I save the change
+    Then changes are saved
+
+    ~@TillMessage_Reversion
+    Scenario: TC0005_Centre_Reversion of Till message
+      And I logged in Trading BackOffice
+      And I choose HeadOffice
+      And I choose Message option from maintanence menu
+      When I choose Live Till message
+      And I remove store from the message
+      And I save the change
+      Then changes are saved
+
+@Centre_SBO_ClashingReport
+      Scenario: Centre_SBO_Verify Promotion Excel extract generated from SBO
+    And I logged in Staging Backoffice
+    And I choose head office
+    And I select GM Promotion option Promotion maintenance option
+    When I extract clashing report for promotion
+    Then I confirmed promotion extracted
+
+
+       @Centre_TBO_Promotion_report
+      Scenario: Centre_TBO_Verify Promotion Excel extract generated from SBO
+       And I logged in Trading BackOffice
+        And I choose head office
+       And I select Promotion extract  option Promotion maintenance option
+          When I extract a GM  promotion
+       Then I confirmed promotion report generated
