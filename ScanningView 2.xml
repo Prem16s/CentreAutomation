@@ -1,0 +1,406 @@
+<layout>
+  <!-- ********** Standard formattings ********************************* -->
+  <color name="fbfbfb" rgb="0xfbfbfb"/>
+  <color name="E9E8E5" rgb="0xE9E8E5"/>
+  <include name="StdPropsInc"/>
+
+  <!-- ********** Common includes as overlay *************************** -->
+  <!--<include name="CustomerDetailsInc"/>-->
+  <!-- <include name="LanguageSwitchElementsInc"/> -->
+  <include name="LocalAttendInc"/>
+  	<panel name="virginTransactionPanel" x="0" y="120" width="640" height="528" backgroundColorName="fbfbfb">
+		<htmltextpane name="virginTransactionTitle" x="50" y="48" width="540" height="50" editable="false" horizontalAlignment="center" colorName="black" border="empty" opaque="false" font="TextGothamBoldBIG" textId="Add your items"/>
+		<htmltextpane name="virginTransactionHint" x="128" y="106" width="385" height="56" editable="false" horizontalAlignment="center" colorName="black" border="empty" opaque="false" font="TextGothamMedium20" textId="Scan a barcode using the scanner below to add items"/>
+		<label name="virginTransactionImage" x="165" y="226" width="222" height="177" iconId="sunlight/1024x768/pictograms/scanItem_222x177.png"/>
+	</panel>
+	
+	    <!-- Refund virgin transaction -->
+  <panel name="refundVirginTransactionPanel" x="0" y="0" width="1048" height="768" opaque="false" visible="false">
+	<htmltextpane name="customerTopTitle" x="80" y="32" width="744" height="28" horizontalAlignment="left"
+	colorName="black" editable="false" opaque="false" font="TextGothamSemiBold20" textId="Return receipt accepted"/>
+	
+	<htmltextpane name="customerTopMessage" x="80" y="68" width="744" height="28" horizontalAlignment="left"
+	colorName="black" editable="false" opaque="false" font="TextGothamBlack19" textId="Please follow on-screen instructions to get a refund"/>
+	
+	<htmltextpane name="customerTitle" x="52" y="209" width="684" height="50" horizontalAlignment="left"
+	colorName="black" editable="false" opaque="false" font="TextGothamBoldBIG" textId="Scan items you wish to return"/>
+	
+	<htmltextpane name="customerMessage" x="52" y="275" width="584" height="64" horizontalAlignment="left"
+	colorName="black" editable="false" opaque="false" font="TextGothamBoldLarge" textId="Scan return item''s barcode"/>
+	
+	<label name="infoIcon" x="40" y="48" width="24" height="33" iconId="sunlight/1024x768/pictograms/check.png"/>
+	<label name="scanReceiptPic" x="495" y="273" width="446" height="356" iconId="sunlight/1024x768/pictograms/refunds.png"/>
+	
+	<label name="topPanelBg" x="24" y="16" width="816" height="96" iconId="sunlight/1024x768/computed/backgrounds/f4faed_816x96"/>
+	<label name="refundMainPanelBg" x="24" y="170" width="976" height="468" iconId="sunlight/1024x768/computed/backgrounds/c07_976x468"/>
+	<panel name="refundBackground" x="0" y="120" width="1024" height="528" backgroundColorName="101820"/>
+
+  </panel>
+  
+  <include name="MonetaryElementsWideInc"/>
+  <include name="HeaderInc"/>
+  <include name="ItemImagesInc"/>
+  <include name="SparksAcceptedInc"/>
+
+	<label name="mnsLogo" x="775" y="242" width="115" height="46" iconId="sunlight/1024x768/pictograms/mns-logo-black_115x46.png"/>
+		
+	<panel name="buttonsPanel" x="664" y="360" width="336" height="272" opaque="false">		
+		<togglebutton name="skipBagging" x="447" y="0" width="0" height="114" appearance="sunlight/1024x768/computed/buttons/ms-white-border-d1d1d1_202x114" colorName="black"
+        font="TextGothamSemiBold22" designName="CenteredBtnDesign" textId="Button Scanning SkipBagging"/>
+		
+		<togglebutton name="barcodeEntry" x="176" y="0" width="160" height="128" appearance="sunlight/1024x768/computed/buttons/ms-white-border-d1d1d1_160x128" colorName="black"
+        font="TextGothamBoldMedium" designName="ScanningTopIconTextBtnDesign" iconId="sunlight/1024x768/pictograms/barcode-icon_64x64.png" textId="Button Scanning BarcodeEntryFood"/>
+
+		<togglebutton name="itemCatalogChoice1" x="0" y="0" width="160" height="128" appearance="sunlight/1024x768/computed/buttons/ms-white-border-d1d1d1_160x128" colorName="black"
+		font="TextGothamBoldMedium" designName="ScanningTopIconTextBtnDesign" iconId="sunlight/1024x768/pictograms/search-icon_64x64.png" textId="Search for loose items"/>
+		
+		<!--Top up gift card & gift receipt -->
+		<panel name="posSpecialCallElements" width="336" height="128" x="0" y="144" border="empty" opaque="false" view="POSSpecialCallElementsView.POSSpecialCallElementsInScanningView"/>
+	</panel>	
+	
+
+  
+	<togglebutton name="voidVirginTransaction" x="501" y="672" width="147" height="80" appearance="sunlight/1024x768/computed/buttons/101820-square-white-border_147x80"
+		colorName="white" font="TextGothamBoldLarge" designName="newBackBtnDesign" text="Back"/>
+
+
+  
+  <!-- Hybrid layout start -->
+  <!-- <panel name="rfidBulkReading" x="0" y="0" width="0" height="0" opaque="false" view="RFIDBulkReadingView"/> -->
+  
+  <label name="attendantComing" x="459" y="329" width="436" height="288" iconId="sunlight/1024x768/pictograms/specials/attendant_is_coming.png"/>
+  <htmltextpane name="title" x="370" y="120" width="624" height="30" editable="false" horizontalAlignment="center" colorName="black" autoAdjustFontSize="false" border="empty" opaque="false" font="TextGothamSemiBold20" textId="Processing Request"/>
+  <label name="gapBetweenDialogAndHeader" x="360" y="160" width="644" height="2" opaque="false" border="gapBorder"/>
+  <panel name="messagePanel" x="360" y="204" width="644" height="175" opaque="false">
+    <htmltextpane name="customerHint" x="10" y="0" width="624" height="175" editable="false" horizontalAlignment="center" colorName="black" autoAdjustFontSize="false" border="empty" opaque="false" font="TextGothamBoldLARGE" textId="A colleague is processing your request"/>
+  </panel>
+  <label name="mainBackground" x="360" y="106" width="644" height="642" iconId="sunlight/1024x768/computed/backgrounds/c07_644x642"/>
+  <!-- Hybrid layout end -->
+  <panel name="qsrInfoDialog" x="0" y="0" width="1024" height="768" border="empty" opaque="false">
+    <include name="QsrCompositionQuickInfoInc"/>
+    <label name="fdspicture" x="0" y="86" height="683" width="1024" iconId="sunlight/1024x768/computed/backgrounds/c01-transparent_1024x682"/>
+  </panel>  
+  
+  <include name="ScanBarcodeCameraInc"/>
+  <include name="ControlElementsWithOnlyHelpInc"/>
+
+  <panel name="softOrHardItemPanel" x="448" y="450" width="471" height="34" opaque="false">
+    <htmltextpane name="softOrHardItem" x="0" y="10" height="34" width="471" font="TextGothamBoldSMALL"
+      editable="false" horizontalAlignment="center" colorName="black" autoAdjustFontSize="false"
+        border="empty" opaque="false" textId="taggedItemScannedText"/>
+    
+  </panel>
+	
+  <include name="StdElementsM75Inc"/>
+  <htmltextpane name="stdElements.hint" visible="false"/>
+  <htmltextpane name="stdElements.programControlledHint" visible="false"/>
+  <!-- <panel name="hintAndCustomerStatusTextPanel" y="332" /> -->
+  
+  <include name="WeightsAndMeasuresInc"/>
+
+  <!-- ********** Layout definitions *********************************** -->
+  
+  <!--  DRS Redeem Start -->
+  
+	<panel name="drsPanel" x="360" y="170" width="650" height="700" border="empty" opaque="false" visible="false">
+	<htmltextpane name="pleaseScan" x="20" y="40" width="584" height="150" editable="false" horizontalAlignment="west" colorName="black" autoAdjustFontSize="true"  
+    border="empty" opaque="false" font="TextGothamBoldBIG" textId="Please scan your Deposit Return Scheme Voucher(s)" visible="false"/>
+    <label name="drsVoucherPic" x="240" y="220" width="146" height="93" iconId="sunlight/1024x768/tenders/mands/drsVoucher_146x93.png" visible="false"/>    
+	</panel>
+	
+	<!--  DRS Redeem End -->
+  
+  <!-- Scan First Item / Virgin Transaction -->
+  
+  <label name="chScanSCO" x="660" y="240" width="320" height="252" iconId="sunlight/1024x768/pictograms/sco-icon_320x252.png" visible="false"/>
+  <htmltextpane name="scanFirstItemText" x="380" y="180" width="400" height="100"
+        editable="false" opaque="false" border="empty" font="TextGothamBoldBIG" horizontalAlignment="west" textId="scanFirstItemText" visible ="false"/>
+ 
+    
+	<panel name="voidSelectedEntry" x="740" y="436" width="244" height="48" border="empty" opaque="false" view="VoidEntryByCustomerView" visible="false"/>
+	
+  <panel name="additionalHintPanel" x="363" y="10" width="361" height="60" border="empty" opaque="false">
+    <htmltextpane name="additionalHintText" x="0" y="0" width="361" height="70"
+        editable="false" opaque="false" border="empty" font="TextGothamMediumLarge" autoAdjustFontSize="true"/>
+  </panel>
+
+  <panel name="tabPanel" x="354" y="106" width="640" height="61" opaque="false" visible="false">
+    <togglebutton name="barcodeScannerTabText" x="5" y="0" width="640" height="53" colorName="c12" font="TextGothamSemiBold20" designName="CenteredBtnDesign" appearance="sunlight/1024x768/computed/buttons/transparent_640x53" textId="Label Scanning BarcodeScanner Tab"/>
+<!--
+    <label name="barcodeScannerTabText" x="0" y="0" width="325" height="61" colorName="c12" font="TextGothamBlackMedium" horizontalAlignment="center" verticalAlignment="center" textId="Label Scanning BarcodeScanner Tab"/>
+-->
+    <label name="barcodeScannerTabIcon" x="5" y="0" width="646" height="53" iconId="sunlight/1024x768/computed/backgrounds/barcode-scanner_640x53"/>
+    <!--togglebutton name="itemCatalogChoice1" x="328" y="0" width="323" height="53" font="TextGothamSemiBold20" designName="CenteredBtnDesign" appearance="sunlight/1024x768/computed/buttons/c06-border_323x53" textId="Button Scanning Produce"/-->
+  </panel>
+    <label name="textBox" x="448" y="450" width="471" height="34" iconId="sunlight/1024x768/pictograms/SpeechBubbles/yellow-box.png" visible="false"/>
+
+  
+  <buttondesign name="AudioButtonDesign">
+    <positioning attribute="icon" origin="west" refPoint="west" x="0" y="0"/>
+    <positioning attribute="text" origin="west" refPoint="west" x="65" y="0"/>
+  </buttondesign>
+  <togglebutton name="audio" x="180" y="670" width="143" height="80" appearance="sunlight/1024x768/computed/buttons/ms-black-square_143x80" iconId="sunlight/1024x768/pictograms/audio-icon_64x64.png" designName="AudioButtonDesign" hideWhenDisabled="true" font="TextGothamBoldLarge" textId="Button Audio" visible="false"/>
+
+	<!-- Refunds -->
+	<label name="refundModePic" x="715" y="200" width="282" height="282" iconId="sunlight/1024x768/pictograms/RFID_returns_resize.gif" visible="false"/>
+	<label name="refundFramePic" x="686" y="510" width="314" height="112" iconId="sunlight/1024x768/pictograms/refundFrame.png" visible="false"/>
+	<label name="refundFinishAndPayDisabledPic" x="630" y="654" width="370" height="98" iconId="sunlight/1024x768/pictograms/refundFinPayDisabled.png" visible="false"/>
+	<textfield name="returningLabel" x="702" y="526" width="104" height="36" horizontalAlignment="left" colorName="white"
+          editable="false" opaque="false" border="empty" font="TextGothamMedium20" textId="Returning:" visible="false"/>
+		  
+	<panel name="rightBackground" x="640" y="120" width="384" height="528" backgroundColorName="E9E8E5"/>
+	<panel name="leftBackground" x="0" y="120" width="640" height="528" backgroundColorName="fbfbfb"/>
+  
+  <!-- ********** Common includes as underlay ************************** -->
+  <include name="LogoInc"/>
+  <include name="ClockInc"/>
+  <!-- <include name="CountDownInc"/> -->
+  <include name="StdMainPanelFor2BtnRowsAndItemCatalogTabInc"/>
+  <include name="FooterInc"/>
+
+  <!-- ********** Variables for controlling layout during runtime ****** -->
+  
+    <if name="CFG:audioButton" value="true">  
+		<togglebutton name="audio" visible="true"/>
+	</if>
+
+	<if name="CFG:audioButton" value="true" negated="true">  
+		<togglebutton name="audio" visible="false"/>
+	</if>
+  
+  
+  <if name="virginTransaction" value="true">
+		<togglebutton name="voidVirginTransaction" x="501" y="672" width="147" height="80" appearance="sunlight/1024x768/computed/buttons/101820-square-white-border_147x80" 
+			textId="Button ControlElements Back" font="TextGothamBoldLarge"  iconId="sunlight/1024x768/pictograms/back_32x32.png" designName="newBackBtnDesign" colorName="white" visible="true"/>
+		<panel name="monetaryElements.totalPanel" visible="false"/>
+		<panel name="monetaryElements.savingsPanel" visible="false"/>
+		<panel name="virginTransactionPanel" visible="true"/>		
+		<if name="posRegisteredCustomer" value="true" negated="true">		
+		</if>
+  </if>
+  
+  <if name="virginTransaction" value="true" negated="true">  
+		<togglebutton name="voidVirginTransaction" visible="false" height="0"/>
+		<panel name="virginTransactionPanel" visible="false"/>
+		<if name="hasSelection" value="true">
+		</if>
+	    <panel name="hintAndCustomerStatusTextPanel" width="600" y="400" visible="false"/>
+	    <panel name="stdElements" width="600" visible="false"/>        
+  </if>
+  
+  <if name="attendant" value="true" negated="true">
+    <panel name="additionalHintPanel" visible="false"/>
+    <if name="skipBaggingAllowed" value="true">
+      <togglebutton name="skipBagging" visible="true"/>
+      <panel name="additionalHintPanel" visible="true"/>
+    </if>
+    <if name="skipBaggingAllowed" value="false"> 
+      <togglebutton name="skipBagging" visible="false"/>
+      <panel name="additionalHintPanel" visible="false"/>
+    </if>
+  </if>
+
+  <if name="attendant" value="true">
+    <panel name="buttonsPanel" visible="false"/>
+    <panel name="softOrHardItemPanel" x="348"/>
+     <!-- <togglebutton name="voidVirginTransaction" visible="false"/> -->
+    <!-- <togglebutton name="qsrDescriptionForEntry" visible="false"/> -->
+    <!-- <sound name="sound" visible="false"/> -->
+    <panel name="tabPanel" x="336" width="318"/>
+    <!--togglebutton name="itemCatalogChoice1" x="159" width="159" appearance="sunlight/1024x768/computed/buttons/c06-border_159x61"/-->
+    <!-- <togglebutton name="crateItem" width="43" appearance="sunlight/1024x768/computed/buttons/c07_43x50"/> -->
+    <togglebutton name="barcodeEntry" x="53" width="43" appearance="sunlight/1024x768/computed/buttons/c07_43x50"/>
+    <panel name="voidSelectedEntry" x="159" width="43"/>
+    <togglebutton name="posSpecialCallElements.specialBtn2" x="106" width="43"/>
+    <togglebutton name="skipBagging" visible="false"/>
+    <!-- <togglebutton name="voidVirginTransaction" x="553" width="96" appearance="sunlight/1024x768/computed/buttons/c07_96x50"/> -->
+    <!-- <togglebutton name="qsrDescriptionForEntry" x="553" width="96" appearance="sunlight/1024x768/computed/buttons/c07_96x50"/> -->
+  </if>
+  
+   <if name="itemScanned" value="true">
+   
+	<label name="chScanSCO" visible="false"/>
+        <panel name="hintAndCustomerStatusTextPanel" width="594" x="448" y="460"/> 
+        <panel name="stdElements" x="0" width="471"/> 
+        <htmltextpane name="stdElements.hint" x="0" y="0" height="34" width="471" autoAdjustFontSize="false" font="TextGothamBoldSMALL" visible="true"/>
+        <htmltextpane name="stdElements.programControlledHint" x="0" y="0" height="34" width="471" autoAdjustFontSize="false" font="TextGothamBoldSMALL" visible="true"/>
+		<label name="textBox" visible="false"/>  <!-- Transitioning to be removed -->
+		<htmltextpane name="scanFirstItemText" visible="false"/>
+		<panel name="voidSelectedEntry" visible="false"/>
+        <label name="chScanSCO" visible="false"/>
+        <panel name="hintAndCustomerStatusTextPanel" width="594" x="448" y="460"/> 
+        <panel name="stdElements" x="0" width="471"/> 
+        <htmltextpane name="stdElements.hint" x="0" y="0" height="34" width="471" autoAdjustFontSize="false" font="TextGothamBoldSMALL" visible="true"/>
+        <htmltextpane name="stdElements.programControlledHint" x="0" y="0" height="34" width="471" autoAdjustFontSize="false" font="TextGothamBoldSMALL" visible="true"/>
+		    <label name="textBox" visible="true"/>       
+      <if name="attendant" value="true">             
+        <togglebutton name="barcodeEntry" visible="false"/>
+        <panel name="voidSelectedEntry" visible="false"/>
+        <panel name="posSpecialCallElements" visible="false"/>
+      </if>
+      <if name="attendant" value="true" negated="true">
+          <togglebutton name="barcodeEntry" visible="false"/>
+          <panel name="voidSelectedEntry" visible="false"/>
+          <panel name="posSpecialCallElements" visible="false"/>
+      </if>
+   </if>
+   <if name="itemScanned" value="false">
+   
+   
+   
+    <htmltextpane name="stdElements.hint" y="25" visible="true"/>
+    <htmltextpane name="stdElements.programControlledHint" y="25" visible="true"/>
+      
+   </if>
+  
+  <if name="POS:taggedItemScanned" value="true">
+    <panel name="softOrHardItemPanel" visible="true"/>
+		<!-- <label name="textBox" visible="true"/> -->
+  </if>
+  <if name="POS:taggedItemScanned" value="true" negated="true">
+    <panel name="softOrHardItemPanel" visible="false"/>
+  </if>
+
+  <if name="waitingForQsrDecision" value="true">
+        <panel name="qsrInfoDialog" visible="true"/>
+        <if name="attendant" value="true">
+            <panel name="wrapping" x="336" width="313"/> 
+        </if>
+  </if>
+  <if name="waitingForQsrDecision" value="true" negated="true">
+        <panel name="qsrInfoDialog" visible="false" started="false"/>
+  </if>
+    
+  <if name="qsrItemSelected" value="true">
+    <!-- <animation name="presentQsrDetailsAnimation" started="true"/> -->
+  </if>
+  
+  <if name="qsrItemSelected" value="true" negated="true">
+    <!-- <animation name="presentQsrDetailsAnimation" started="false"/> -->
+  </if>
+  <!-- ********** Variables for testing layout with FormDesigner ******* -->
+
+<if name="POS:inHybridPOSMode" value="true">
+    <label name="attendantComing" visible="true"/>
+    <togglebutton name="monetaryElements.payNow" visible="false"/>
+    <togglebutton name="monetaryElements.voidVirginTransaction" visible="false"/>
+    <htmltextpane name="title" visible="true"/>
+    <label name="gapBetweenDialogAndHeader" visible="true"/> 
+    <panel name="messagePanel" visible="true"/> 
+    <htmltextpane name="customerHint" visible="true"/>
+    <label name="mainBackground" visible="true"/>
+    <if name="attendant" value="true">
+        <htmltextpane name="title" width="280"/> 
+        <htmltextpane name="customerHint" width="280"/> 
+        <label name="attendantComing" x="288"/>
+        <label name="mainPanelBg" visible="false"/>
+        <panel name="tabPanel" visible="false"/> 
+    </if>
+  </if>
+  <if name="POS:inHybridPOSMode" value="true" negated="true">
+    <label name="attendantComing" visible="false"/>
+    <togglebutton name="monetaryElements.payNow" visible="true"/>
+    <togglebutton name="monetaryElements.voidVirginTransaction" visible="false"/>
+    <htmltextpane name="title" visible="false"/>
+    <label name="gapBetweenDialogAndHeader" visible="false"/> 
+    <panel name="messagePanel" visible="false"/> 
+    <htmltextpane name="customerHint" visible="false"/>
+    <label name="mainBackground" visible="false"/>
+  </if>
+  
+  <if name="POS:sparksAccepted" value="true">
+    <panel name="itemImages" visible="false"/>
+		<label name="chScanSCO" visible="false"/>	
+		<htmltextpane name="stdElements.hint" visible="false"/>
+        <htmltextpane name="stdElements.programControlledHint" visible="false"/>		
+  </if>
+  
+  <if name="POS:sparksAccepted" value="true" negated="true">       	
+  </if>  
+  
+  <!-- Redeem DRS Vouchers-->
+  
+  <if name="POS:DRSRedemptionMode" value="true">
+  
+		<label name="mainPanelBg" x="360" y="170" width="644" height="468" iconId="sunlight/1024x768/computed/backgrounds/c07_644x468"/>
+		<panel name="drsPanel" visible="true"/>
+		<label name="drsVoucherPic" visible="true"/>
+		<htmltextpane name="pleaseScan" visible="true"/>
+		<panel name="itemImages" visible="false"/>
+		<panel name="posSpecialCallElements" visible="false"/>	
+		<togglebutton name="itemCatalogChoice1" visible="false"/>
+		<togglebutton name="barcodeEntry" visible="false"/>
+		<panel name="voidSelectedEntry" visible="false"/>   
+	
+	<panel name="monetaryElements.pairedBalancePanel" x="519" y="530" visible="true"/>
+		<togglebutton name="monetaryElements.payNow" x="280" y="0" width="370" height="98" colorName="black" hideWhenDisabled="false" iconId="" textId= "Finish and get cash" font="TextGothamBold30" designName="DRSGetCashBtnDesign" appearance="sunlight/1024x768/computed/buttons/ms-green-square_370x98" visible="true"/>
+		<togglebutton name="monetaryElements.voidVirginTransaction" designName="CenteredTextBtnDesign" x="334" y="640" width="254" height="0" hideWhenDisabled="false" textId="Cancel" font="TextGothamBold30" appearance="sunlight/1024x768/computed/buttons/black-white-border_254x98" visible="true"/>
+		<panel name="monetaryElements.goNextPanel" visible="false"/>		
+		<htmltextpane name="stdElements.hint" visible="false"/>
+    <htmltextpane name="stdElements.programControlledHint" visible="false"/>
+	
+  </if>
+  
+  <!-- Refunds conditions -->
+  <if name="POS:refundMode" value="true">
+	<panel name="softOrHardItemPanel" visible="false"/>
+	<panel name="drsPanel" visible="false"/>
+	<label name="chScanSCO" visible="false"/>
+	<label name="mnsLogo" visible="false"/>
+	<htmltextpane name="scanFirstItemText" visible="false"/>
+	<panel name="voidSelectedEntry" visible="false"/>
+	<panel name="additionalHintPanel" visible="false"/>
+	<panel name="buttonsPanel" visible="false"/>
+	<label name="mainPanelBg" visible="false"/>
+	<panel name="tabPanel" visible="false"/>
+	<panel name="monetaryElements.payNowPanel" y="550"/>
+	<togglebutton name="monetaryElements.payNow" x="0" y="0" textId="Request a refund" hideWhenDisabled="true"/>
+	<label name="refundModePic" visible="true"/>
+	<label name="refundFramePic" visible="true"/>
+	<label name="refundFinishAndPayDisabledPic" visible="true"/>
+	<textfield name="returningLabel" visible="true"/>
+	<!-- Receipt -->
+	<label name="monetaryElements.scrollpaneBackground" x="0" y="0" width="640" height="528" iconId="sunlight/1024x768/backgrounds/refundVRBackground.png"/>
+	<panel name="monetaryElements.yourOrderLabel" x="800" y="526"/>
+	<label name="monetaryElements.yourOrderLabelTextItem" x="122" y="4" font="TextGothamMedium20" colorName="white"/>
+	<textfield name="monetaryElements.itemCount" x="20" y="0" width="100" height="36" horizontalAlignment="right" colorName="white" font="TextGothamMedium20"/>
+	<panel name="monetaryElements.balancePanel" visible="false"/>
+	<panel name="monetaryElements.changePanel" visible="false"/>
+	<panel name="monetaryElements.overpayPanel" visible="false"/>
+	<panel name="monetaryElements.savingsPanel" visible="false"/>
+	<panel name="monetaryElements.totalPanel" x="701" y="454"/>
+	<label name="monetaryElements.totalLabel" x="-2" y="0" width="100" height="36"
+          textId="Refund:" horizontalAlignment="left" font="TextGothamBoldLarge" colorName="white"/>
+	<textfield name="monetaryElements.total" x="176" y="0" width="106" height="36" horizontalAlignment="right"
+          editable="false" opaque="false" border="empty" font="TextGothamBoldLarge" colorName="white"/>
+	<panel name="rightBackground" backgroundColorName="101820"/>
+	<panel name="headerWhite" backgroundColorName="101820"/>
+	<if name="virginTransaction" value="true">
+		<panel name="monetaryElements" visible="false"/>
+		<label name="refundFinishAndPayDisabledPic" visible="false"/>
+		<panel name="refundVirginTransactionPanel" visible="true"/>
+		<togglebutton name="voidVirginTransaction" x="360" y="665" width="254" height="98" appearance="sunlight/1024x768/computed/buttons/101820-square-white-border_254x98"
+			text="Cancel return" font="TextGothamBoldLarge" designName="CenteredBtnDesign" colorName="white" visible="true" iconId=""/>
+		<htmltextpane name="virginTransactionTitle" x="50" y="48" width="540" height="50" editable="false" horizontalAlignment="left"/>
+		<panel name="leftBackground" visible="false" height="0"/>
+		<panel name="rightBackground" visible="false" height="0"/>
+		<panel name="virginTransactionPanel" visible="false" height="0"/>
+		<panel name="headerWhite" backgroundColorName="101820"/>
+	</if>
+	<if name="virginTransaction" value="true" negated="true">
+		<panel name="monetaryElements" visible="true"/>
+		<label name="refundFinishAndPayDisabledPic" visible="false"/>
+		<panel name="refundVirginTransactionPanel" visible="false"/>
+		<togglebutton name="voidVirginTransaction" height="0" visible="false"/>
+	</if>
+  </if>
+  
+  <!-- ********** Variables for testing layout with FormDesigner ******* -->
+  <if name="designMode" value="0">
+
+  </if>
+  <if name="designMode" value="1">
+		<htmltextpane name="stdElements.hint" text="test Text"/>
+    <htmltextpane name="stdElements.programControlledHint" text="test Text"/>		
+  </if>
+</layout>
